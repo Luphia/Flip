@@ -107,10 +107,133 @@
 
 		box-shadow: 0 15px 50px rgba(0,0,0,0.2);
 	}
+
+
+	.user {
+		z-index: 1000;
+		display: block;
+		position: fixed;
+		bottom: 0px;
+		left: 50%;
+		margin-left: -250px;
+		width: 500px;
+		height: 150px;
+		background: rgba(255, 255, 255, .5);
+
+		text-align: center;
+
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+	.user .container {
+		margin-top: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+		background: #ccc;
+		border: 1px solid #bbb;
+		overflow: auto;
+
+		padding: 10px;
+		height: 100%;
+		border-radius: 5px;
+	}
+	.user .container > div {
+		margin: 10px;
+	}
+	.user .ActionPoint {
+		margin: auto;
+		padding: 0 30%;
+	}
+	.user .ActionPoint .point {
+		display: block;
+		float: left;
+		margin: 2px;
+		width: 10px;
+		height: 10px;
+		border-radius: 20%;
+		background: #acf;
+	}
+	.user .ActionPoint .point.off {
+		background: #aaa;
+	}
+.diamond {
+  float: left;
+  width: 28px;
+  height: 20px;
+}
+
+.diamond .top div{
+  float: left;
+}
+.diamond .bottom div{
+  float: left;
+}
+.diamond .face {
+  height: 0;
+  width: 0;
+  margin-left: -4px;
+  margin-right: -4px;
+  border: 4px solid transparent;
+  border-top: 4px solid #8bf;
+  border-bottom: 0px solid transparent;
+}
+.diamond.off .face {
+	border-top: 4px solid #888;
+}
+
+.diamond .faceup {
+  height: 0;
+  width: 0;
+  border: 5px solid transparent;
+  border-top: 1px solid transparent;
+  border-bottom: 4px solid #8af;
+}
+.diamond.off .faceup {
+	border-bottom: 4px solid #777;	
+}
+
+.diamond .facedown {
+  height: 0;
+  width: 0;
+  margin: .7px 0;
+  padding: 0;
+  border: 5px solid transparent;
+  border-top: 14px solid #7af;
+}
+.diamond.off .facedown {
+	border-top: 14px solid #666;	
+}
+
+.diamond .left {
+	border-left: 3px solid transparent;
+}
+.diamond .right {
+	border-right: 3px solid transparent;
+}
+
+.diamond .left2 {
+  margin-left: 5px;
+  margin-right: -4px;
+  border-right: 3px solid transparent;
+  -webkit-transform: skew(30deg, 0deg);
+  -moz-transform: skew(30deg, 0deg);
+  -o-transform: skew(30deg, 0deg);
+  transform: skew(30deg, 0deg);
+}
+.diamond .right2 {
+  margin-left: -4px;
+  border-left: 3px solid transparent;
+  -webkit-transform: skew(-30deg, 0deg);
+  -moz-transform: skew(-30deg, 0deg);
+  -o-transform: skew(-30deg, 0deg);
+  transform: skew(-30deg, 0deg);
+}
+
 </style>
 
 <script>
 var cardID = 0;
+// 卡片建構子
 card = function() {
 	cardID++;
 	var node = document.createElement("div");
@@ -152,6 +275,14 @@ card = function() {
 	return node;
 }
 
+// 用戶建構子
+var user = function() {
+
+}
+
+
+
+
 var loadCard = function(n) {
 	if(!n) {
 		n = 30;
@@ -178,6 +309,85 @@ function scrollFinished() {
 </head>
 
 <body onscroll="bodyScroll();">
+<div class="user"><div class="container">
+	<div>USER</div>
+	<div></div>
+	<div class="ActionPoint">
+
+<div class="diamond">
+  <div class="top">
+    <div class="faceup left"></div>
+  <div class="face"></div>
+    <div class="faceup"></div>
+  <div class="face"></div>
+    <div class="faceup right"></div>
+  </div>
+  <div class="bottom">
+    <div class="facedown left2"></div>
+    <div class="facedown"></div>
+    <div class="facedown right2"></div>
+  </div>
+</div>
+<div class="diamond">
+  <div class="top">
+    <div class="faceup left"></div>
+  <div class="face"></div>
+    <div class="faceup"></div>
+  <div class="face"></div>
+    <div class="faceup right"></div>
+  </div>
+  <div class="bottom">
+    <div class="facedown left2"></div>
+    <div class="facedown"></div>
+    <div class="facedown right2"></div>
+  </div>
+</div>
+<div class="diamond">
+  <div class="top">
+    <div class="faceup left"></div>
+  <div class="face"></div>
+    <div class="faceup"></div>
+  <div class="face"></div>
+    <div class="faceup right"></div>
+  </div>
+  <div class="bottom">
+    <div class="facedown left2"></div>
+    <div class="facedown"></div>
+    <div class="facedown right2"></div>
+  </div>
+</div>
+<div class="diamond off">
+  <div class="top">
+    <div class="faceup left"></div>
+  <div class="face"></div>
+    <div class="faceup"></div>
+  <div class="face"></div>
+    <div class="faceup right"></div>
+  </div>
+  <div class="bottom">
+    <div class="facedown left2"></div>
+    <div class="facedown"></div>
+    <div class="facedown right2"></div>
+  </div>
+</div>
+<div class="diamond off">
+  <div class="top">
+    <div class="faceup left"></div>
+  <div class="face"></div>
+    <div class="faceup"></div>
+  <div class="face"></div>
+    <div class="faceup right"></div>
+  </div>
+  <div class="bottom">
+    <div class="facedown left2"></div>
+    <div class="facedown"></div>
+    <div class="facedown right2"></div>
+  </div>
+</div>
+
+	</div>
+</div></div>
+
 <script>
 	loadCard(30);
 </script>
