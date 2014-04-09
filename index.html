@@ -7,8 +7,8 @@
 	}
 	.panel {
 		float: left;
-		width: 400px;
-		height: 200px;
+		width: 300px;
+		height: 400px;
 		margin: 10px;
 		position: relative;
 		font-size: .8em;
@@ -19,13 +19,13 @@
 		perspective: 600px;
 	}
 	.panel:hover {
-
-
 		-webkit-transition: all .4s ease-in-out;
 		transition: all .4s ease-in-out;
 	}
 	/* -- make sure to declare a default for every property that you want animated -- */
 	/* -- general styles, including Y axis rotation -- */
+
+	/*
 	.panel .front {
 		float: none;
 		position: absolute;
@@ -52,7 +52,6 @@
 		-moz-backface-visibility: hidden;
 		backface-visibility: hidden;
 
-		/* -- transition is the magic sauce for animation -- */
 		-webkit-transition: all .4s ease-in-out;
 		transition: all .4s ease-in-out;
 	}
@@ -81,7 +80,7 @@
 		text-align: center;
 
 		-webkit-transform: rotateY(-180deg);
-		-moz-transform: rotateY(-179deg); /* setting to 180 causes an unnatural-looking half-flip */
+		-moz-transform: rotateY(-179deg);
 		transform: rotateY(-179deg);
 
 		-webkit-transform-style: preserve-3d;
@@ -92,7 +91,6 @@
 		-moz-backface-visibility: hidden;
 		backface-visibility: hidden;
 
-		/* -- transition is the magic sauce for animation -- */
 		-webkit-transition: all .4s ease-in-out;
 		transition: all .4s ease-in-out;
 	}
@@ -107,7 +105,59 @@
 
 		box-shadow: 0 15px 50px rgba(0,0,0,0.2);
 	}
+	*/
 
+	.case {
+		float: left;
+		width: 250px;
+		height: 400px;
+		margin: 10px;
+		position: relative;
+		font-size: .8em;
+		border-radius: 5px;
+		background: #fff;
+
+		-webkit-perspective: 600px;
+		-moz-perspective: 600px;
+		perspective: 600px;
+		-webkit-transition: all .4s ease-in-out;
+		transition: all .4s ease-in-out;
+	}
+	.case > div.header {
+		display: block;
+		width: 250px;
+		height: 200px;
+		background: #abf;
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, .3);
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+
+		-webkit-transition: all .4s ease-in-out;
+		transition: all .4s ease-in-out;
+	}
+	.case > div.header::after {
+		border-top: solid 9px #abf;
+		border-left: solid 9px transparent;
+		border-right: solid 9px transparent;
+		border-bottom: solid 0px transparent;
+		content: '';
+		position: absolute;
+		margin-top: 200px;
+		margin-left: 30;
+	}
+	.case > div.header:hover {
+		opacity: .5;
+	}
+	.case > div.header:hover:before {
+		content: 'Read Now';
+		font-size: 1.5em;
+		text-align: center;
+		width: 250px;
+		line-height: 200px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
 
 	.user {
 		z-index: 1000;
@@ -234,7 +284,7 @@
 <script>
 var cardID = 0;
 // 卡片建構子
-card = function() {
+var card = function() {
 	cardID++;
 	var node = document.createElement("div");
 	node.className = "panel";
@@ -275,6 +325,26 @@ card = function() {
 	return node;
 }
 
+var Case = function() {
+	var node = document.createElement("div");
+	node.className = "case";
+
+	var front = document.createElement("div");
+	front.className = "header";
+
+	var frontPad = document.createElement("div");
+	frontPad.className = "content";
+
+	var frontTitle = document.createElement("div");
+	frontTitle.className = "footer";
+
+	node.appendChild(front);
+	node.appendChild(frontPad);
+	node.appendChild(frontTitle);
+
+	return node;
+}
+
 // 用戶建構子
 var user = function() {
 
@@ -292,6 +362,15 @@ var loadCard = function(n) {
 		document.getElementsByTagName("body")[0].appendChild(new card());
 	}
 }
+var loadCase = function(n) {
+	if(!n) {
+		n = 30;
+	}
+
+	for(var i = 0; i < n; i++) {
+		document.getElementsByTagName("body")[0].appendChild(new Case());
+	}
+}
 
 var scrollTimer = -1;
 function bodyScroll() {
@@ -303,11 +382,12 @@ function bodyScroll() {
 }
 
 function scrollFinished() {
-	loadCard();
+	loadCase();
 }
 </script>
 </head>
 
+<!-- body onscroll="bodyScroll();" -->
 <body onscroll="bodyScroll();">
 <div class="user"><div class="container">
 	<div>USER</div>
@@ -389,7 +469,15 @@ function scrollFinished() {
 </div></div>
 
 <script>
-	loadCard(30);
+	//loadCard(30);
+	loadCase(12);
 </script>
+
+<div class="case">
+	<div class="header"></div>
+	<div class="content"></div>
+	<div class="footer"></div>
+</div>
+
 </body>
 </html>

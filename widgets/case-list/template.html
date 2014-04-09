@@ -1,0 +1,36 @@
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span2">
+			<!--Sidebar content-->
+			Search: <input ng-model="query">
+			Sort by:
+			<select ng-model="orderProp">
+				<option value="-likes">最受歡迎</option>
+				<option value="-views">熱門程度</option>
+				<option value="name">發佈時間</option>
+				<option value="-pay">報酬高低</option>
+				<option value="-end">結案日期</option>
+			</select>
+		</div>
+		<div class="span10">
+			<!--Body content-->
+			<ul class="cases">
+				<li ng-repeat="case in cases | filter:query | orderBy:orderProp" class="case {{case.type}}">
+					<div class="header">
+						<img ng-src="{{case.image}}">
+					</div>
+					<div class="content">
+						<h3>{{case.info.title}}</h3>
+						<p>{{case.info.content}}</p>
+						<p class="payment">{{case.pay | currency}}</p>
+					</div>
+					<div class="footer">
+						<div class="like"></div>
+						<div class="likes">{{case.likes}}</div>
+						<div class="views">{{case.views}}</div>
+					</div>
+				</li>
+			<ul>
+		</div>
+	</div>
+</div>

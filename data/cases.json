@@ -1,0 +1,153 @@
+[
+	{
+		"id": 1,
+		"name": "CASE 01",
+		"type": "music",
+		"tag": ["Tag01", "Tag04", "Tag05"],
+		"pay": 5000,
+		"payrange": [150000, 200000],
+		"image": "",
+		"place": "",
+		"end": 1397033246813,
+		"info": {
+			"title": "EINS!",
+			"content": "In AngularJS 1.2.0 and later, ngRoute has been moved to its own module. If you are getting this error after upgrading to 1.2.x, be sure that you've installed ngRoute."
+		},
+		"age": 0,
+		"likes": 213,
+		"views": 3948
+	}
+	,
+	{
+		"id": 2,
+		"name": "CASE 02",
+		"type": "dance",
+		"tag": ["Tag03", "Tag05", "Tag07"],
+		"pay": 150000,
+		"payrange": [150000, 200000],
+		"image": "",
+		"place": "",
+		"end": 1397033236813,
+		"info": {
+			"title": "ZWEI!",
+			"content": "In AngularJS 1.2.0 and later, ngRoute has been moved to its own module. If you are getting this error after upgrading to 1.2.x, be sure that you've installed ngRoute."
+		},
+		"age": 0,
+		"likes": 82,
+		"views": 324
+	}
+	,
+	{
+		"id": 3,
+		"name": "CASE 03",
+		"type": "drama",
+		"tag": ["Tag04", "Tag06", "Tag08"],
+		"pay": 18000,
+		"payrange": [150000, 200000],
+		"image": "",
+		"place": "",
+		"end": 1397033256813,
+		"info": {
+			"title": "DREI!",
+			"content": "In AngularJS 1.2.0 and later, ngRoute has been moved to its own module. If you are getting this error after upgrading to 1.2.x, be sure that you've installed ngRoute."
+		},
+		"age": 0,
+		"likes": 55,
+		"views": 1148
+	}
+	,
+	{
+		"id": 4,
+		"name": "CASE 04",
+		"type": "music",
+		"tag": ["Tag06", "Tag07", "Tag08"],
+		"pay": 7000,
+		"payrange": [150000, 200000],
+		"image": "",
+		"place": "",
+		"end": 1397037246813,
+		"info": {
+			"title": "VIER!",
+			"content": "In AngularJS 1.2.0 and later, ngRoute has been moved to its own module. If you are getting this error after upgrading to 1.2.x, be sure that you've installed ngRoute."
+		},
+		"age": 0,
+		"likes": 9,
+		"views": 142
+	}
+	,
+	{
+		"id": 5,
+		"name": "CASE 05",
+		"type": "dance",
+		"tag": ["Tag01", "Tag03", "Tag05"],
+		"pay": 50000,
+		"payrange": [150000, 200000],
+		"image": "",
+		"place": "",
+		"end": 1397033946813,
+		"info": {
+			"title": "FUNF!",
+			"content": "In AngularJS 1.2.0 and later, ngRoute has been moved to its own module. If you are getting this error after upgrading to 1.2.x, be sure that you've installed ngRoute."
+		},
+		"age": 0,
+		"likes": 982,
+		"views": 8261
+	}
+	,
+	{
+		"id": 6,
+		"name": "CASE 06",
+		"type": "music",
+		"tag": ["Tag02", "Tag04", "Tag06"],
+		"pay": 3000,
+		"payrange": [150000, 200000],
+		"image": "",
+		"place": "",
+		"end": 1397033246213,
+		"info": {
+			"title": "SECHS!",
+			"content": "In AngularJS 1.2.0 and later, ngRoute has been moved to its own module. If you are getting this error after upgrading to 1.2.x, be sure that you've installed ngRoute."
+		},
+		"age": 0,
+		"likes": 748,
+		"views": 3382
+	}
+	,
+	{
+		"id": 7,
+		"name": "CASE 07",
+		"type": "drama",
+		"tag": ["Tag08", "Tag05", "Tag03"],
+		"pay": 500,
+		"payrange": [150000, 200000],
+		"image": "",
+		"place": "",
+		"end": 1397033216813,
+		"info": {
+			"title": "SIEBEN!",
+			"content": "In AngularJS 1.2.0 and later, ngRoute has been moved to its own module. If you are getting this error after upgrading to 1.2.x, be sure that you've installed ngRoute."
+		},
+		"age": 0,
+		"likes": 23,
+		"views": 5512
+	}
+	,
+	{
+		"id": 8,
+		"name": "CASE 08",
+		"type": "dance",
+		"tag": ["Tag01", "Tag02", "Tag03"],
+		"pay": 1500,
+		"payrange": [150000, 200000],
+		"image": "",
+		"place": "",
+		"end": 1397033247813,
+		"info": {
+			"title": "ACHT!",
+			"content": "In AngularJS 1.2.0 and later, ngRoute has been moved to its own module. If you are getting this error after upgrading to 1.2.x, be sure that you've installed ngRoute."
+		},
+		"age": 0,
+		"likes": 74,
+		"views": 2966
+	}
+]
