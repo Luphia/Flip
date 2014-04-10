@@ -1,12 +1,12 @@
 'use strict';
 
 /* App Module */
-var artistarApp = angular.module('artistarApp', [
+var artistaApp = angular.module('artistaApp', [
 	'ngRoute',
-	'artistarControllers'
+	'artistaControllers'
 ]);
 
-artistarApp.config(['$routeProvider', function($routeProvider) {
+artistaApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/cases', {
 		templateUrl: 'widgets/case-list/template.html',
 		controller: 'CaseListCtrl'

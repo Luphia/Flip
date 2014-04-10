@@ -1,6 +1,6 @@
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span2">
+<div>
+	<div>
+		<div>
 			<!--Sidebar content-->
 			Search: <input ng-model="query">
 			Sort by:
@@ -12,7 +12,7 @@
 				<option value="-end">結案日期</option>
 			</select>
 		</div>
-		<div class="span10">
+		<div>
 			<!--Body content-->
 			<ul class="cases">
 				<li ng-repeat="case in cases | filter:query | orderBy:orderProp" class="case {{case.type}}">
