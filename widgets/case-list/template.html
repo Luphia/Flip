@@ -20,11 +20,18 @@
 						<img ng-src="{{case.image}}">
 					</div>
 					<div class="content">
-						<h3>{{case.info.title}}</h3>
-						<p>{{case.info.content}}</p>
-						<p class="payment">{{case.pay | currency}}</p>
+						<div class="description">
+							<h3>{{case.info.title}}</h3>
+							<p>{{case.info.content}}</p>
+						</div>
+						<div class="detail">
+							<p class="payment">{{case.payrange.1 | currency}}</p>
+							<p class="time">表演時間 {{case.executeTime | date : format}}</p>
+						</div>
 					</div>
 					<div class="footer">
+						<div class="publish">{{case.publishTime | date: format}}</div>
+						<div class="location">{{case.info.location}}</div>
 						<div class="like"></div>
 						<div class="likes">{{case.likes}}</div>
 						<div class="views">{{case.views}}</div>

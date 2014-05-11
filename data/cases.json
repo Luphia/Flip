@@ -1,17 +1,21 @@
 [
 	{
 		"id": 1,
-		"name": "CASE 01",
+		"name": "EINS!",
 		"type": "music",
 		"tag": ["Tag01", "Tag04", "Tag05"],
-		"pay": 5000,
-		"payrange": [150000, 200000],
+		"payrange": [5000, 8000],
 		"image": "",
-		"place": "",
-		"end": 1397033246813,
+		"theme": "咖啡廳開幕",
+		"duration": [2400, 3600],
+		"endTime": 1397033246813,
+		"executeTime": 1397034246800,
+		"publishTime": 1397033146813,
+		"link": "",
 		"info": {
-			"title": "EINS!",
-			"content": "In AngularJS 1.2.0 and later, ngRoute has been moved to its own module. If you are getting this error after upgrading to 1.2.x, be sure that you've installed ngRoute."
+			"title": "我需要 一組 樂團",
+			"content": "我們咖啡店走一個文青的路線，希望能提供後搖類型的樂團，細節都可再討論！",
+			"location": "新北市 永和區"
 		},
 		"age": 0,
 		"likes": 213,

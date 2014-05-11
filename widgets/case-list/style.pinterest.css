@@ -18,7 +18,7 @@ div[ng-view] {
 
 .case {
 	float: left;
-	height: 200px;
+	width: 250px;
 	margin: 10px;
 	position: relative;
 	font-size: .8em;
@@ -37,42 +37,41 @@ div[ng-view] {
 	background: #acf;
 }
 .case.dance > div.header::after {
-	border-left: solid 9px #acf;
+	border-top: solid 9px #acf;
 }
 .case.music > div.header {
 	background: #fca;
 }
 .case.music > div.header::after {
-	border-left: solid 9px #fca;
+	border-top: solid 9px #fca;
 }
 .case.drama > div.header {
 	background: #ffa;
 }
 .case.drama > div.header::after {
-	border-left: solid 9px #ffa;
+	border-top: solid 9px #ffa;
 }
 .case > div.header {
-	float: left;
 	display: block;
-	width: 230px;
+	width: 250px;
 	height: 200px;
 	background: #abf;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, .3);
 	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
+	border-top-right-radius: 5px;
 
 	-webkit-transition: all .4s ease-in-out;
 	transition: all .4s ease-in-out;
 }
 .case > div.header::after {
-	border-top: solid 9px transparent;
-	border-left: solid 9px #abf;
-	border-right: solid 0px transparent;
-	border-bottom: solid 9px transparent;
+	border-top: solid 9px #abf;
+	border-left: solid 9px transparent;
+	border-right: solid 9px transparent;
+	border-bottom: solid 0px transparent;
 	content: '';
 	position: absolute;
-	margin-top: 100px;
-	margin-left: 230px;
+	margin-top: 200px;
+	margin-left: 30px;
 }
 .case > div.header:hover {
 	opacity: .5;
@@ -81,7 +80,7 @@ div[ng-view] {
 	content: 'Read Now';
 	font-size: 1.5em;
 	text-align: center;
-	width: 230px;
+	width: 250px;
 	line-height: 200px;
 	position: absolute;
 	top: 0px;
@@ -89,31 +88,17 @@ div[ng-view] {
 }
 .case > div.content {
 	padding: 10px;
-	line-height: 1.3em;
-	margin-left: 250px;
-	height: 154px;
-	overflow: auto;
+	height: 150px;
+	line-height: 1.1em;
 }
-.case > div.content > div.description {
-	float: left;
-	width: 250px;
-}
-.case > div.content > div.detail {
-	float: left;
-	width: 200px;
-}
-.case > div.content > div.detail > p.payment {
-	text-align: center;
-	font-size: 2em;
-	color: #f80;
-}
-.case > div.content > div.detail > p.time {
+.case > div.content > p.payment {
 	text-align: center;
 	font-size: 1.2em;
 	color: #f80;
 }
 .case > div.footer {
 	display: block;
+	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	background: #eee;
 	padding: 5px;
@@ -133,20 +118,6 @@ div[ng-view] {
 	display: block;
 	color: #fcc;
 	margin-right: 2px;
-}
-.case > div.footer > div.publish::before {
-	content: '刊登日期: ';
-	color: #bbb;
-}
-.case > div.footer > div.publish {
-	float: left;
-}
-.case > div.footer > div.location::before {
-	content: '地點: ';
-	color: #bbb;
-}
-.case > div.footer > div.location {
-	float: left;
 }
 .case > div.footer > div.likes:before {
 	content: 'L:';
