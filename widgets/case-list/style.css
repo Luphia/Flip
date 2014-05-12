@@ -53,6 +53,7 @@ div[ng-view] {
 }
 .case > div.header {
 	float: left;
+	overflow: hidden;
 	display: block;
 	width: 230px;
 	height: 200px;

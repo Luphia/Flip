@@ -5,7 +5,7 @@
 		"type": "music",
 		"tag": ["Tag01", "Tag04", "Tag05"],
 		"payrange": [5000, 8000],
-		"image": "",
+		"image": "/upload/James - 2.jpg",
 		"theme": "咖啡廳開幕",
 		"duration": [2400, 3600],
 		"endTime": 1397033246813,
@@ -24,21 +24,25 @@
 	,
 	{
 		"id": 2,
-		"name": "CASE 02",
-		"type": "dance",
-		"tag": ["Tag03", "Tag05", "Tag07"],
-		"pay": 150000,
-		"payrange": [150000, 200000],
+		"name": "ZWEI!",
+		"type": "music",
+		"tag": ["Tag03", "Tag07", "Tag08"],
+		"payrange": [8000, 12000],
 		"image": "",
-		"place": "",
-		"end": 1397033236813,
+		"theme": "學校迎新演唱會",
+		"duration": [1800, 1800],
+		"endTime": 1397033246813,
+		"executeTime": 1397034246800,
+		"publishTime": 1397033146813,
+		"link": "",
 		"info": {
-			"title": "ZWEI!",
-			"content": "In AngularJS 1.2.0 and later, ngRoute has been moved to its own module. If you are getting this error after upgrading to 1.2.x, be sure that you've installed ngRoute."
+			"title": "我需要 一組 獨立 樂團",
+			"content": "讓新鮮人感受大學的不同魅力吧！需要能帶動現場氣氛的樂團!",
+			"location": "台北市 北投區"
 		},
 		"age": 0,
-		"likes": 82,
-		"views": 324
+		"likes": 213,
+		"views": 3948
 	}
 	,
 	{
