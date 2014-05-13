@@ -47,21 +47,25 @@
 	,
 	{
 		"id": 3,
-		"name": "CASE 03",
-		"type": "drama",
+		"name": "DREI!",
+		"type": "music",
 		"tag": ["Tag04", "Tag06", "Tag08"],
-		"pay": 18000,
-		"payrange": [150000, 200000],
+		"payrange": [5000, 10000],
 		"image": "",
-		"place": "",
-		"end": 1397033256813,
+		"theme": "婚禮",
+		"duration": [3600, 3600],
+		"endTime": 1397033246813,
+		"executeTime": 1398873600000,
+		"publishTime": 1397033146813,
+		"link": "",
 		"info": {
-			"title": "DREI!",
-			"content": "In AngularJS 1.2.0 and later, ngRoute has been moved to its own module. If you are getting this error after upgrading to 1.2.x, be sure that you've installed ngRoute."
+			"title": "我需要 一組 爵士 樂團",
+			"content": "我們婚禮想要帶給大家舒服的氣氛，若是有薩克斯風在裡面的話，應該會是更好的選擇!",
+			"location": "台北市 北投區"
 		},
 		"age": 0,
-		"likes": 55,
-		"views": 1148
+		"likes": 213,
+		"views": 3948
 	}
 	,
 	{
