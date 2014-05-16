@@ -65,21 +65,24 @@ div[ng-view] {
 	-webkit-transition: all .4s ease-in-out;
 	transition: all .4s ease-in-out;
 }
-.case > div.header::after {
-	border-top: solid 9px transparent;
-	border-left: solid 9px #abf;
-	border-right: solid 0px transparent;
-	border-bottom: solid 9px transparent;
+.case > div.header > div.photo {
+	background: #fff;
+	display: block;
+	width: 214px;
+	height: 165px;
+	margin: 5px 5px 5px;
+	padding: 3px 3px 20px 3px;
+}
+.case > div.header > div.photo > div.image {
+	display: block;
+	width: 214px;
+	height: 165px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #ccc;
+}
+.case > div.header::before {
 	content: '';
-	position: absolute;
-	margin-top: 100px;
-	margin-left: 230px;
-}
-.case > div.header:hover {
-	opacity: .5;
-}
-.case > div.header:hover:before {
-	content: 'Read Now';
 	font-size: 1.5em;
 	text-align: center;
 	width: 230px;
@@ -87,6 +90,25 @@ div[ng-view] {
 	position: absolute;
 	top: 0px;
 	left: 0px;
+}
+.case > div.header::after {
+	border-top: solid 9px transparent;
+	border-left: solid 9px #abf;
+	border-right: solid 0px transparent;
+	border-bottom: solid 9px transparent;
+	content: '';
+	position: absolute;
+	top: 100px;
+	left: 230px;
+}
+.case > div.header:hover > div.photo > div.image {
+	-webkit-filter: blur(3px) grayscale(.5) opacity(.9);
+}
+.case > div.header:hover:before {
+	content: 'Read Now';
+	color: #fff;
+	z-index: 1;
+	text-shadow: 0px 0px 3px #000;
 }
 .case > div.content {
 	padding: 10px;

@@ -17,7 +17,9 @@
 			<ul class="cases">
 				<li ng-repeat="case in cases | filter:query | orderBy:orderProp" class="case {{case.type}}">
 					<div class="header">
-						<img ng-src="{{case.image}}">
+						<div class="photo">
+							<div class="image" style="background-image: url('{{case.image}}');"></div>
+						</div>
 					</div>
 					<div class="content">
 						<div class="description">
